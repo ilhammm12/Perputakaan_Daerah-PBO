@@ -1,17 +1,17 @@
 class Superadmin:
 
-    def __init__(self, username, password):
-        self.username = username
-        self.password = password
+    def __init__(self, *args, **kwargs):
+        self.__username = kwargs.get('username','admin')
+        self.__password = kwargs.get('password','admin321')
 
     def set_petugas(self,):
         return
 
-    def set_username(self, value):
-        self.username = value
+    def username(self, value):
+        self.__username = value
 
-    def set_password(self, value):
-        self.password = value
+    def password(self, value):
+        self.__password = value
 
 class petugas():
 
