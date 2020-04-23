@@ -16,54 +16,54 @@ class Superadmin:
 class petugas():
 
     def __init__(self, *args, **kwargs ):
-        self.id_petugas = kwargs.get ('id_petugas', 'PS0001')
-        self.nama_petugas = kwargs.get ('nama_petugas', 'Dwianti')
-        self.alamat = kwargs.get ('alamat', 'jl.Setia Budi')
-        self.email = kwargs.get ('emai', 'dwianti123@gmail.com')
-        self.jenis_kelamin = kwargs.get ('jenis_kelamin', 'perempuan')
-        self.id_laporan = {}
+        self.__id_petugas = kwargs.get ('id_petugas', 'PS0001')
+        self.__nama_petugas = kwargs.get ('nama_petugas', 'Dwianti')
+        self.__alamat = kwargs.get ('alamat', 'jl.Setia Budi')
+        self.__email = kwargs.get ('emai', 'dwianti123@gmail.com')
+        self.__jenis_kelamin = kwargs.get ('jenis_kelamin', 'perempuan')
+        self.__id_laporan = {}
 
     @property
     def id_petugas(self) :
-        return self.id_petugas
+        return self.__id_petugas
     @id_petugas.setter
     def id_petugas(self, id):
-        self.id_petugas = id
+        self.__id_petugas = id
 
     @property
     def nama_petugas(self):
-        return self.nama_petugas
+        return self.__nama_petugas
     @nama_petugas.setter
     def nama_petugas(self, nama):
-        self.nama_petugas = nama
+        self.__nama_petugas = nama
 
     @property
     def alamat(self):
-        return self.alamat
+        return self.__alamat
     @alamat.setter
     def alamat(self, alamat):
-        self.alamat = alamat
+        self.__alamat = alamat
 
     @property
     def email(self):
-        return self.email
+        return self.__email
     @email.setter
     def email(self, email):
-        self.email = email
+        self.__email = email
 
     @property
     def jenis_kelamin(self):
-        return self.jenis_kelamin
+        return self.__jenis_kelamin
     @jenis_kelamin.setter
     def jenis_kelamin (self, jeniskelamin):
-        self.jenis_kelamin = jeniskelamin
+        self.__jenis_kelamin = jeniskelamin
 
     @property
     def id_laporan(self):
-        return self.id_laporan 
+        return self.__id_laporan 
     @id_laporan.setter
     def id_laporan(self, ):
-        self.id_laporan = {}
+        self.__id_laporan = {}
 
 class laporan():
   
