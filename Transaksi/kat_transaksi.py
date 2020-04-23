@@ -53,7 +53,7 @@ class pengembalian() :
         return self.id_pengembalian
     @id_pengembalian.setter
     def id_pengembalian(self, id_pengembalian):
-        self.id_pengembalian = id
+        self.id_pengembalian = id_pengembalian
 
     @property
     def denda(self):
