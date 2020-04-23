@@ -15,52 +15,66 @@ class pengunjung():
 
 class Anggota:
 
-    def __init__(self, id,nama, alamat, telpon, tempatlahir, tanggallahir, status):
-        self.id = id
-        self.nama = nama
-        self.alamat = alamat
-        self.telpon = telpon
-        self.tempatlahir = tempatlahir
-        self.tanggallahir = tanggallahir
-        self.status = status
+    def __init__(self, *args, **kwargs):
+        self.__id = kwargs.get('id','01')
+        self.__nama = kwargs.get('nama','Baharudin')
+        self.__alamat = kwargs.get('alamat','Karang Joang')
+        self.__telpon = kwargs.get('telpon','085348992')
+        self.__tempatlahir = kwargs.get('tempatlahir','Balikpapan')
+        self.__tanggallahir = kwargs.get('tanggallahir','30 July 1995')
+        self.__status = kwargs.get('status','anggota')
 
     def GetPencarian(self,):
         return
 
-    def get_id(self):
-        return self.id
-    def set_id(self, value):
-        self.id = value
+    @property
+    def id(self):
+        return self.__id
+    @id.setter
+    def id(self, value):
+        self.__id = value
 
-    def get_nama(self):
-        return self.nama
-    def set_nama(self, value):
-        self.nama = value
+    @property
+    def nama(self):
+        return self.__nama
+    @nama.setter
+    def nama(self, value):
+        self.__nama = value
 
-    def get_alamat(self):
-        return self.alamat
-    def set_alamat(self, value):
-        self.alamat = value
+    @property
+    def alamat(self):
+        return self.__alamat
+    @alamat.setter
+    def alamat(self, value):
+        self.__alamat = value
 
-    def get_telpon(self):
-        return self.telpon
-    def set_telpon(self, value):
-        self.telpon = value
+    @property
+    def telpon(self):
+        return self.__telpon
+    @telpon.setter
+    def telpon(self, value):
+        self.__telpon = value
 
-    def get_tempatlahir(self):
-        return self.tempatlahir
-    def set_tempatlahir(self, value):
-        self.tempatlahir = value
+    @property
+    def tempatlahir(self):
+        return self.__tempatlahir
+    @tempatlahir.setter
+    def tempatlahir(self, value):
+        self.__tempatlahir = value
 
-    def get_tanggallahir(self):
-        return self.tanggallahir
-    def set_tanggallahir(self, value):
-        self.tanggallahir = value
+    @property
+    def tanggallahir(self):
+        return self.__tanggallahir
+    @tanggallahir.setter
+    def tanggallahir(self, value):
+        self.__tanggallahir = value
 
-    def get_status(self):
-        return self.status
-    def set_status(self, value):
-        self.status = value
+    @property
+    def status(self):
+        return self.__status
+    @status.setter
+    def status(self, value):
+        self.__status = value
 
 
 
