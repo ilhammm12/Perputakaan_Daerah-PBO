@@ -86,35 +86,3 @@ class buku():
     @no_rak.setter
     def no_rak(self, nomor_rak):
         self.__nomor_rak = nomor_rak
-
-        self.judul_buku
-
-    def get_pengarang(self):
-        return self.pengarang
-
-    def set_pengarang(self, pengarang):
-        self.pengarang
-
-    def get_penerbit(self):
-        return self.penerbit
-
-    def set_penerbit(self, penerbit):
-        self.penerbit
-
-    def get_tahun(self):
-        return self.tahun_terbit
-
-    def set_tahun(self, tahun_terbit):
-        self.tahun_terbit
-
-    def get_stok(self):
-        return self.stok_buku
-
-    def set_stok(self, stok_buku):
-        self.stok_buku
-
-    def get_no_rak(self):
-        return self.nomor_rak
-
-    def set_no_rak(self, nomor_rak):
-        self.nomor_rak
