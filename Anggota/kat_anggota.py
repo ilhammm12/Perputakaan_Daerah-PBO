@@ -1,17 +1,20 @@
 class pengunjung():
 
-    def __init__(self, nama, almt, tlp, jum_peng, ):
-        self.nama = nama
-        self.alamat = almt
-        self.nomor_telepon = tlp
-        self.jumlah_pengunjung = jum_peng
-        self.pencarian = {}
+    def __init__(self, *args, **kwargs):
+        self.__nama = kwargs.get('nama', 'wahyu')
+        self.__alamat = kwargs.get('alamat', 'jln baturatna KM 11 ')
+        self.__nomor_telepon = kwargs.get('nomor_telpon', '083141124872')
+        self.__jumlah_pengunjung = kwargs.get('jumlah_pengunjung', '~')
+        self.__pencarian = kwargs.get('pencarian', '~')
 
-    def get_pencarian(self):
-        return self.pencarian
+    @property
+    def pencarian(self):
+        return self.__pencarian
 
-    def set_pencarian(self, ):
-        self.pencarian
+    @pencarian.setter
+    def pencarian(self, ):
+        self.__pencarian = pencarian
+
 
 class Anggota:
 
