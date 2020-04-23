@@ -1,84 +1,109 @@
-class login():
+class login(): 
 
-    def __init__(self, username, password):
-        self.username = username
-        self.password = password
-
-    def get_username(self):
-        return self.username
-
-    def set_username(self, username):
-        self.username = username
-
-    def get_password(self):
-        return self.password
-
-    def set_password(self, password):
-        self.password = password
+    def __init__(self, *args, **kwargs):
+        self.__username = kwargs.get('username', 'admin') 
+        self.__password = kwargs.get('password', 'admin123') 
+        
+    @property
+    def username(self):
+        return self.__username
+        
+    @username.setter
+    def username (self, username):
+        self.__username = username
+        
+    @property
+    def password(self):
+        return self.__password
+        
+    @password.setter
+    def password(self, password):
+        self.__password = password
+        
 
 class registrasi():
 
-    def __init__(self, no_regis, nik, nama, tempat_lahir, tgl_lahir, alamat, no_hp, jenis_kelamin, jenis_anggota):
-        self.no_regis = no_regis
-        self.nik = nik
-        self.nama = nama
-        self.tempat_lahir = tempat_lahir
-        self.tgl_lahir = tgl_lahir
-        self.alamat = alamat
-        self.no_hp = no_hp
-        self.jenis_kelamin = jenis_kelamin
-        self.jenis_anggota = jenis_anggota
+    def __init__(self, *args, *kwargs):
+        self.__no_regis = kwargs.get('no_regis', '0001')
+        self.__nik = kwargs.get('nik', '1415089462')
+        self.__nama = kwargs.get('nama', 'Wawan Ridwan') 
+        self.__tempat_lahir = kwargs.get('tempat_lahir', 'Bandung') 
+        self.__tgl_lahir = kwargs.get('tgl_lahir', '15/03/2000')
+        self.__alamat = kwargds.get('alamat', 'Gg. Mulia') 
+        self.__no_hp = kwargs.get('no_hp', '081247854462')
+        self.__jenis_kelamin = kwargs.get('jenis_kelamin', 'laki-laki') 
+        self.__jenis_anggota = kwargs.get('jenis_anggota', 'anggota') 
 
-    def get_no_regis(self):
-        return self.no_regis
-
-    def set_no_regis(self, no_regis):
-        self.no_regis = no_regis
-
-    def get_nik(self):
-        return self.nik
-
-    def set_nik(self, nik):
-        self.nik = nik
-
-    def get_nama(self):
-        return self.nama
-
-    def set_nama(self, nama):
-        self.nama = nama
-
-    def get_tempat_lahir(self):
-        return self.tempat_lahir
-
-    def set_tempat_lahir(self, tempat_lahir):
-        self.tempat_lahir = tempat_lahir
-
-    def get_tgl_lahir(self):
-        return self.tgl_lahir
-
-    def set_tgl_lahir(self, tgl_lahir):
-        self.tgl_lahir = tgl_lahir
-
-    def get_alamat(self):
-        return self.alamat
-
-    def set_alamat(self, alamat):
-        self.alamat = alamat
-
-    def get_no_hp(self):
-        return self.no_hp
-
-    def set_no_hp(self, no_hp):
-        self.no_hp = no_hp
-
-    def get_jenis_kelamin(self):
-        return self.jenis_kelamin
-
-    def set_jenis_kelamin(self, jenis_kelamin):
-        self.jenis_kelamin = jenis_kelamin
-
-    def get_jenis_anggota(self):
-        return self.jenis_anggota
-
-    def set_jenis_anggota(self, jenis_anggota):
-        self.jenis_anggota = jenis_anggota
+    @property
+    def no_regis(self):
+        return self.__no_regis
+        
+    @no_regis.setter
+    def no_regis(self, no_regis):
+        self.__no_regis = no_regis  
+        
+    @property
+    def nik(self):
+        return self.__nik
+        
+    @nik.setter
+    def nik(self, nik):
+        self.__nik = nik
+        
+    @property
+    def nama(self):
+        return self.__nama
+        
+    @nama.setter
+    def nama(self, nama):
+        self.__nama = nama
+        
+    @property
+    def tempat_lahir(self):
+        return self.__tempat_lahir
+        
+    @tempat_lahir.setter
+    def tempat_lahir(self, tempat_lahir):
+        self.__tempat_lahir = tempat_lahir
+        
+            
+    @property
+    def tgl_lahir(self):
+        return self.__tgl_lahir
+        
+    @tgl_lahir.setter
+    def tgl_lahir(self, tgl_lahir):
+        self.__tgl_lahir = tgl_lahir
+        
+    @property
+    def alamat(self):
+        return self.__alamat
+        
+    @alamat.setter
+    def alamat(self, alamat):
+        self.__alamat = alamat
+   
+    @property
+    def no_hp(self):
+        return self.__no_hp
+        
+    @no_hp.setter
+    def no_hp(self, no_hp):
+        self.__no_hp = no_hp  
+        
+    @property
+    def jenis_kelamin(self):
+        return self.__jenis_kelamin
+      
+    @jenis_kelamin.setter
+    def jenis_kelamin(self, jenis_kelamin):
+        self.__jenis_kelamin = jenis_kelamin
+        
+    @property
+    def jenis_anggota(self):
+        return self.__jenis_anggota
+       
+    @jenis_anggota.setter
+    def jenis_anggota(self, jenis_anggota):
+        self.__jenis_anggota = jenis_anggota              	
+  
