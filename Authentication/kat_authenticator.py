@@ -9,7 +9,7 @@ class login():
         return self.__username
         
     @username.setter
-    def username (self, username):
+    def username(self, username):
         self.__username = username
         
     @property
