@@ -1,3 +1,7 @@
+from sqlachemy import create_engine, Column, Integer, String, Date, Boolean, ForeignKey
+from sqlachemy.ext.declarative import declarative_base
+from sqlachemy.orm import sessionmaker, relationship
+
 class pengunjung():
 
     def __init__(self, *args, **kwargs):
@@ -88,4 +92,19 @@ class Anggota:
         self.kata_kunci = katakun
         self.tanggal_pencarian = tgl_pen
 
+class tb_anggota(Base):
+    __tablename__ = "tb_anggota"
+
+    id_regis = Column('id_regis', Integer, primary_key=True)
+    NIK = Column('NIK', Integer)
+    Nama = Column('Nama', String)
+    Tempat_lahir = Column('Tempat_lahir', String)
+    Tanggal_lahir = Column('Tanggal_lahir', Date)
+    Alamat = Column('Alamat', String)
+    No_hp = Column('No_hp', Integer)
+    Jenis_kelamin = Column('Jenis_kelamin', String)
+   
+engine = create_engine('sqllite:///:memory:', echo=True)
+Base.metadata.create_all(bind=engine)
+Session = sessionmaker(bind=engine)
 
