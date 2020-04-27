@@ -13,57 +13,32 @@ class Superadmin:
     def password(self, value):
         self.__password = value
 
-class petugas():
+form sqlalchemy import create_engine, Column, Integer, String, ForeignKey
+form sqlalchemy.ext.declarative import declarative_base
+form sqlalchemy.orm import sessionmaker, relationship
 
-    def __init__(self, *args, **kwargs ):
-        self.__id_petugas = kwargs.get ('id_petugas', 'PS0001')
-        self.__nama_petugas = kwargs.get ('nama_petugas', 'Dwianti')
-        self.__alamat = kwargs.get ('alamat', 'jl.Setia Budi')
-        self.__email = kwargs.get ('emai', 'dwianti123@gmail.com')
-        self.__jenis_kelamin = kwargs.get ('jenis_kelamin', 'perempuan')
-        self.__id_laporan = {}
+Base = declarative_base()
 
-    @property
-    def id_petugas(self) :
-        return self.__id_petugas
-    @id_petugas.setter
-    def id_petugas(self, id):
-        self.__id_petugas = id
+class petugas(Base):
 
-    @property
-    def nama_petugas(self):
-        return self.__nama_petugas
-    @nama_petugas.setter
-    def nama_petugas(self, nama):
-        self.__nama_petugas = nama
+    __tablename__ = "petugas"
 
-    @property
-    def alamat(self):
-        return self.__alamat
-    @alamat.setter
-    def alamat(self, alamat):
-        self.__alamat = alamat
+    id_petugas = Column(Integer, primary_key=True)
+    nama_petugas = Column(String)
+    tempat_lahir = Column(String)
+    alamat = Column(String)
+    email = Column(String)
+    jenis_kelamin = Column(String)
+    id_laporan = Column(Integer)
 
-    @property
-    def email(self):
-        return self.__email
-    @email.setter
-    def email(self, email):
-        self.__email = email
+engine = create_engine('sqlite:///:memory', echo=True)
+Base.metadata.create_all(bind=engine)
+Session = sessionmaker(bind=engine)
 
-    @property
-    def jenis_kelamin(self):
-        return self.__jenis_kelamin
-    @jenis_kelamin.setter
-    def jenis_kelamin (self, jeniskelamin):
-        self.__jenis_kelamin = jeniskelamin
+session= Session()
 
-    @property
-    def id_laporan(self):
-        return self.__id_laporan 
-    @id_laporan.setter
-    def id_laporan(self, ):
-        self.__id_laporan = {}
+session.close()
+
 
 class laporan():
   
