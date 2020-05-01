@@ -10,13 +10,13 @@ Base = declarative_base()
 class bukuORM(base):
     __tablename__ = "buku"
 
-    id_buku = colum('id_buku', integer, primary_key=True)
-    judul_buku = colum('judul_buku', string, unique=True)
-    pengarang = colum('pengarang', string)
-    penerbit = colum('penerbit', string)
-    tahun_terbit = colum('tahun_ternit', string)
-    stok_buku = colum('stok_buku', string)
-    nomor_rak = colum('nomor_rak', integer)
+    id_buku = Column('id_buku', Integer, primary_key=True)
+    judul_buku = Column('judul_buku', String, unique=True)
+    pengarang = Column('pengarang', String)
+    penerbit = Column('penerbit', String)
+    tahun_terbit = Column('tahun_ternit', String)
+    stok_buku = Column('stok_buku', String)
+    nomor_rak = Column('nomor_rak', Integer)
 
     def __init__(self, id_buku, judul_buku, pengarang, penerbit, tahun_terbit, stok_buku, nomor_rak):
 
