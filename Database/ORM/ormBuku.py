@@ -8,7 +8,7 @@ engine = create_engine('sqlite:///:memori', echo=True)
 Base = declarative_base()
 
 class bukuORM(base):
-    __tablename__ = "buku"
+    __tablename__ = "Buku"
 
     id_buku = Column('id_buku', Integer, primary_key=True)
     judul_buku = Column('judul_buku', String, unique=True)
