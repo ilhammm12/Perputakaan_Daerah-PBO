@@ -16,7 +16,7 @@ class bukuORM(base):
     penerbit = Column('penerbit', String)
     tahun_terbit = Column('tahun_ternit', String)
     stok_buku = Column('stok_buku', String)
-    nomor_rak = Column('nomor_rak', Integer)
+    nmr_rak = Column('nmr_rak', Integer)
 
     def __init__(self, id_buku, judul_buku, pengarang, penerbit, tahun_terbit, stok_buku, nomor_rak):
 
@@ -26,6 +26,6 @@ class bukuORM(base):
         self.penerbit = penerbit
         self.tahun_terbit = tahun_terbit
         self.stok_buku = stok_buku
-        self.nomor_rak = nomor_rak
+        self.nmr_rak = nomor_rak
 
 Base.metadata.create_all(engine)
