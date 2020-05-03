@@ -4,7 +4,7 @@ class buku():
         self.__id_buku = kwargs.get('id_buku', '1234')
         self.__judul_buku = kwargs.get('judul_buku', 'Haliday')
         self.__pengarang = kwargs.get('pengarang', 'albert')
-        self.__penerbit = kwargs.get('penerbit', 'jogjastore')
+        self.__penerbit = kwargs.get('penerbit', 'bookstore')
         self.__tahun_terbit = kwargs.get('tahun_ternit', '2005')
         self.__stok_buku = kwargs.get('stok_buku', '50')
         self.__nomor_rak = kwargs.get('nomor_rak', '12')
