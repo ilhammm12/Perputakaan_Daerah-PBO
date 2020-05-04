@@ -7,8 +7,7 @@ class petugas():
         self.__alamat = kwargs.get('alamat', 'Muara Badak')
         self.__email = kwargs.get('email', 'dwianti@gmail.com')
         self.__jenis_kelamin = kwargs.get('jenis_kelamin', 'perempuan')
-        self.__id_laporan = kwargs.get('id_laporan', 'a11')
-
+        
         @property
         def id_petugas(self):
             return self.__id_petugas
@@ -56,12 +55,3 @@ class petugas():
         @jenis_kelamin.setter
         def jenis_kelamin(self, jenis_kelamin):
             self.__jenis_kelamin = jenis_kelamin
-
-        @property
-        def id_laporan(self):
-            return self.__id_laporan
-
-        @id_laporan.setter
-        def id_laporan(self,id_laporan):
-            self.__id_laporan = id_laporan
-
