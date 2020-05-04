@@ -3,7 +3,8 @@ class petugas():
     def __init__(self, *args, **kwargs):
         self.__id_petugas = kwargs.get('id_petugas', '456')
         self.__nama_petugas = kwargs.get('nama_petugas', 'Dwianti')
-        self.__tempat_lahir = kwargs.get('tempat_lahir', 'Samarinda, 14 maret 2000')
+        self.__tempat_lahir = kwargs.get('tempat_lahir', 'Samarinda')
+        self.__tgl_lahir = kwargs.get('tgl_lahir', '14 maret 2000')
         self.__alamat = kwargs.get('alamat', 'Muara Badak')
         self.__email = kwargs.get('email', 'dwianti@gmail.com')
         self.__jenis_kelamin = kwargs.get('jenis_kelamin', 'perempuan')
@@ -31,6 +32,14 @@ class petugas():
         @tempat_lahir.setter
         def tempat_lahir(self, tempat_lahir):
             self.__tempat_lahir = tempat_lahir
+         
+        @property
+        def tgl_lahir(self):
+            return  self.__tgl_lahir
+
+        @tgl_lahir.setter
+        def tgl_lahir(self, tgl_lahir):
+            self.__tgl = tgl_lahir
 
         @property
         def alamat(self) :
