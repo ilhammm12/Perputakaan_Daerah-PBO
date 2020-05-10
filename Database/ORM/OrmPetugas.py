@@ -1,6 +1,5 @@
-ffrom sqlachemy import create_engine, Column, Integer, String, Date, Boolean, ForeignKey
-from sqlachemy.ext.declarative import declarative_base
-from sqlachemy.orm import sessionmaker, relationship
+from sqlachemy import create_engine, Column, Integer, String, Date, Boolean, ForeignKey
+from Database.base import Base, sessionFactory
 
 Base = declarative_base()
 
