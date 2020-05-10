@@ -1,8 +1,6 @@
 from sqlachemy import create_engine, Column, Integer, String, Date, Boolean, ForeignKey
 from Database.base import Base, sessionFactory
 
-Base = declarative_base()
-
 class OrmPetugas(Base):
 
     __tablename__ = "tb_petugas"
