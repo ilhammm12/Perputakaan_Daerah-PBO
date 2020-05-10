@@ -1,9 +1,6 @@
 from sqlachemy import create_engine, Column, Integer, String, Date, Boolean, ForeignKey
 from Database.base import Base, sessionFactory
 
-engine = create_engine('sqlite:///:memori', echo=True)
-Base = declarative_base()
-
 class laporan_orm(base):
     __tablename__ = "laporan"
 
