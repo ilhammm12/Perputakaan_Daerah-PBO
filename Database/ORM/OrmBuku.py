@@ -1,4 +1,4 @@
-from sqlachemy import create_engine, Column, Integer, String, Date, Boolean, ForeignKey
+from sqlalchemy import create_engine, Column, Integer, String, Date, Boolean, ForeignKey
 from Database.base import Base, sessionFactory
 
 class OrmBuku(base):
@@ -22,4 +22,37 @@ class OrmBuku(base):
         self.stok_buku = stok_buku
         self.nmr_rak = nomor_rak
 
-Base.metadata.create_all(engine)
+    @staticmethod
+    def deleteBuku(buku):
+        try:
+            session = sessionFactory()
+            session.query(buku).filter_by(id_buku=buku).delete()
+            session.commit()
+            session.close()
+        except Exception as k:
+            print("->", k)
+        else:
+            print("buku berhasih dihapus!!!")
+
+    @staticmethod
+    def getBuku(buku):
+        try:
+            id_bukuBaru= input("id buku Baru ")
+            judul_bukuBaru = input("judul buku baru: ")
+            Pengarang_bukuBaru = input("pengarang buku baru : ")
+            Penerbit_bukuBaru = input("penerbit buku baru : ")
+            thn_terbitbukuBaru = input("tahun terbit buku baru: ")
+            stok_bukuBaru = input("stok buku baru: ")
+            nmr_rakbukuBaru = input("nomor rak buku baru: ")
+            session = sessionFactory()
+            session.query(OrmBuku).filter_by(id_buku=buku).update({Bookorm.Booktype: newBooktpe, Bookorm.Bookname: newBookname, Bookorm.Author: newAuthor, Bookorm.Price: newPrice, BookormRackno: NewRackno, Bookormstatus: Newstatus}, synchronize_session=False)
+            session.commit()
+            session.close()
+        except Exception as k:
+            print("->", k)
+        else:
+            print("BERHASIL MENAMBAHKAN BUKU")
+
+
+
+
