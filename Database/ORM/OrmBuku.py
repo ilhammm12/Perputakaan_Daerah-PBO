@@ -1,7 +1,7 @@
 from sqlachemy import create_engine, Column, Integer, String, Date, Boolean, ForeignKey
 from Database.base import Base, sessionFactory
 
-class bukuORM(base):
+class OrmBuku(base):
     __tablename__ = "Buku"
 
     id_buku = Column('id_buku', Integer, primary_key=True)
