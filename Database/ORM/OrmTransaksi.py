@@ -1,7 +1,7 @@
 from sqlachemy import create_engine, Column, Integer, String, Date, Boolean, ForeignKey
 from Database.base import Base, sessionFactory
 
-class ormTransaksi(Base):
+class OrmTransaksi(Base):
     __tablename__ = "tb_transaksi"
 
     id_pinjam = Column('id_pinjam', Integer, primary_key=True)
