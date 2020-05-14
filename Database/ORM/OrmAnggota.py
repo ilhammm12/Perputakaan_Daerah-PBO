@@ -1,7 +1,7 @@
 from sqlachemy import create_engine, Column, Integer, String, Date, Boolean, ForeignKey
 from Database.base import Base, sessionFactory
 
-class ormAnggota(Base):
+class OrmAnggota(Base):
     __tablename__ = "tb_anggota"
 
     id_regis = Column('id_regis', Integer, primary_key=True)
