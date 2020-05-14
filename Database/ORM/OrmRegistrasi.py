@@ -1,7 +1,7 @@
 from sqlachemy import create_engine, Column, Integer, String, Date, Boolean, ForeignKey
 from Database.base import Base, sessionFactory
 
-class registrasi_orm(base):
+class OrmRegistrasi(base):
     __tablename__ = "registrasi"
 
     no_regis = Column('no_regis', Integer, primary_key=True)
