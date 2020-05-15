@@ -1,38 +1,19 @@
 import sys
-from PyQt5 import QtCore, QtGui
+from PyQt5 import QtGui
 from PyQt5.QtCore import Qt, pyqtSlot
-from PyQt5.QtWidgets import QApplication, QGridLayout, QMessageBox, QWidget, QTableWidget, QTableWidgetItem, QVBoxLayout, QMenuBar, QAction
+from PyQt5.QtWidgets import QApplication, QGridLayout, QMessageBox, QWidget, QTableWidget, QTableWidgetItem, QVBoxLayout
 
 class Window(QWidget):
 
     def __init__(self):
         super().__init__()
-
-        self.title = "PyQt5 Tables"
+        self.title = "Anggota"
         self.top = 100
         self.left = 100
         self.width = 700
         self.height = 500
-        self.resize(1400, 833)
-        self.setWindowFlag(QtCore.Qt.WindowCloseButtonHint, False)
-        self.setWindowTitle("MENU")
-        #membuat layout
-        layoutUtama = QVBoxLayout()
 
-        #tambahkan menubar
-        menubar = QMenuBar()
-        layoutUtama.addWidget(menubar)
-        menuPetugas = menubar.addMenu("Petugas")
-        menuAnggota = menubar.addMenu("Anggota")
-        menuBuku = menubar.addMenu("Buku")
-        menuTransaksi = menubar.addMenu("Transaksi")
-        menuLaporan = menubar.addMenu("Laporan")
-        menuHelp = menubar.addMenu("Help")
-
-        self.setLayout(layoutUtama)
         self.InitWindow()
-        self.show()
-
 
     def InitWindow(self):
         self.setWindowTitle(self.title)
@@ -76,6 +57,12 @@ class Window(QWidget):
         self.tableWidget.setItem(3, 2, QTableWidgetItem("Balikpapan"))
         self.tableWidget.setItem(3, 2, QTableWidgetItem("5 April 2000"))
         self.tableWidget.setItem(3, 2, QTableWidgetItem("aktif"))
+
+
+        self.vBoxLayout = QVBoxLayout()
+        self.vBoxLayout.addWidget(self.tableWidget)
+        self.setLayout(self.vBoxLayout)
+
 
 App = QApplication(sys.argv)
 window = Window()
