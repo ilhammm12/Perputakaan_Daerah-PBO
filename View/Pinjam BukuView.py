@@ -7,7 +7,7 @@ app = QApplication(sys.argv)
 
 window = QWidget()
 window.setGeometry(350,150,600,630)
-window.setWindowTitle(' Data Pinjam Buku')
+window.setWindowTitle(' Data Peminjaman-Pengembalian Buku')
 window.setToolTip('This program is not complete')
 
 
@@ -17,6 +17,12 @@ Lable2 = QLabel('Judul Buku :',window)
 Lable2.move(10,65)
 Lable3 = QLabel('Jumlah :',window)
 Lable3.move(265,65)
+Lable4 = QLabel('Tanggal Peminjaman :',window)
+Lable4.move(10,115)
+Lable5 = QLabel('Tanggal Pengembalian :',window)
+Lable5.move(10,165)
+Lable6 = QLabel('Status :',window)
+Lable6.move(295,165)
 
 
 
@@ -44,15 +50,24 @@ LinEd2.move(75,60)
 LinEd3 = QLineEdit('',window)
 LinEd3.resize(130,30)
 LinEd3.move(310,60)
+LinEd4 = QLineEdit('',window)
+LinEd4.resize(320,30)
+LinEd4.move(120,110)
+LinEd5 = QLineEdit('',window)
+LinEd5.resize(155,30)
+LinEd5.move(130,155)
+LinEd6 = QLineEdit('',window)
+LinEd6.resize(105,30)
+LinEd6.move(335,155)
 
 
 
 tablEx = QTableWidget(window)
 tablEx.resize(560,320 )
-tablEx.move(10,190)
-tablEx.setColumnCount(3)
+tablEx.move(10,215)
+tablEx.setColumnCount(6)
 tablEx.setRowCount(9)
-tablEx.setHorizontalHeaderLabels(("Nama Anggota, Judul Buku, Jumlah").split(','))
+tablEx.setHorizontalHeaderLabels(("Nama Anggota, Judul Buku, Jumlah, tgl pinjam, tgl kembali, status").split(','))
 
 
 
